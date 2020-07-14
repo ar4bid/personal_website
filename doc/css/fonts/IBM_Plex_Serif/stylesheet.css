@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-Light.eot');
+    src: url('IBMPlexSerif-Light.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-Light.woff2') format('woff2'),
+        url('IBMPlexSerif-Light.woff') format('woff'),
+        url('IBMPlexSerif-Light.svg#IBMPlexSerif-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-MediumItalic.eot');
+    src: url('IBMPlexSerif-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-MediumItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-MediumItalic.woff') format('woff'),
+        url('IBMPlexSerif-MediumItalic.svg#IBMPlexSerif-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-ThinItalic.eot');
+    src: url('IBMPlexSerif-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-ThinItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-ThinItalic.woff') format('woff'),
+        url('IBMPlexSerif-ThinItalic.svg#IBMPlexSerif-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-Medium.eot');
+    src: url('IBMPlexSerif-Medium.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-Medium.woff2') format('woff2'),
+        url('IBMPlexSerif-Medium.woff') format('woff'),
+        url('IBMPlexSerif-Medium.svg#IBMPlexSerif-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-SemiBold.eot');
+    src: url('IBMPlexSerif-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-SemiBold.woff2') format('woff2'),
+        url('IBMPlexSerif-SemiBold.woff') format('woff'),
+        url('IBMPlexSerif-SemiBold.svg#IBMPlexSerif-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-LightItalic.eot');
+    src: url('IBMPlexSerif-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-LightItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-LightItalic.woff') format('woff'),
+        url('IBMPlexSerif-LightItalic.svg#IBMPlexSerif-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-Thin.eot');
+    src: url('IBMPlexSerif-Thin.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-Thin.woff2') format('woff2'),
+        url('IBMPlexSerif-Thin.woff') format('woff'),
+        url('IBMPlexSerif-Thin.svg#IBMPlexSerif-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-Bold.eot');
+    src: url('IBMPlexSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-Bold.woff2') format('woff2'),
+        url('IBMPlexSerif-Bold.woff') format('woff'),
+        url('IBMPlexSerif-Bold.svg#IBMPlexSerif-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-Italic.eot');
+    src: url('IBMPlexSerif-Italic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-Italic.woff2') format('woff2'),
+        url('IBMPlexSerif-Italic.woff') format('woff'),
+        url('IBMPlexSerif-Italic.svg#IBMPlexSerif-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-ExtraLightItalic.eot');
+    src: url('IBMPlexSerif-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-ExtraLightItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-ExtraLightItalic.woff') format('woff'),
+        url('IBMPlexSerif-ExtraLightItalic.svg#IBMPlexSerif-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif.eot');
+    src: url('IBMPlexSerif.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif.woff2') format('woff2'),
+        url('IBMPlexSerif.woff') format('woff'),
+        url('IBMPlexSerif.svg#IBMPlexSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-SemiBoldItalic.eot');
+    src: url('IBMPlexSerif-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-SemiBoldItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-SemiBoldItalic.woff') format('woff'),
+        url('IBMPlexSerif-SemiBoldItalic.svg#IBMPlexSerif-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-BoldItalic.eot');
+    src: url('IBMPlexSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-BoldItalic.woff2') format('woff2'),
+        url('IBMPlexSerif-BoldItalic.woff') format('woff'),
+        url('IBMPlexSerif-BoldItalic.svg#IBMPlexSerif-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url('IBMPlexSerif-ExtraLight.eot');
+    src: url('IBMPlexSerif-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSerif-ExtraLight.woff2') format('woff2'),
+        url('IBMPlexSerif-ExtraLight.woff') format('woff'),
+        url('IBMPlexSerif-ExtraLight.svg#IBMPlexSerif-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
