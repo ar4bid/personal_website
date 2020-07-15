@@ -42,8 +42,8 @@ nav a{
 	color: #f2f2f2;
 	text-decoration: none;
 	font-size: 18px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
 	z-index:2;
 	display: flex;
 	align-self: stretch;
@@ -86,14 +86,14 @@ nav li{
 	display: none;
 	position: absolute;
 	flex-direction: column;	
-	top: 9vh;
-	width: max-content;
+	top: 10vh;
+	width: max(100%, 25vw);
 	height: max-content;
 }
 
 .dropdown_content a {
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
 }
 
 .dropdown_btn:hover .dropdown_content{
