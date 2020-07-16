@@ -100,6 +100,10 @@ nav li{
 	display: flex;
 }
 
+body:active .dropdown_content{
+	display: none;	
+}
+
 .content {
 	width: 60%;
 	padding: 0;
