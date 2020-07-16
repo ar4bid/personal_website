@@ -151,6 +151,7 @@
 	</section>
 </main>
 <script>
+	/*Script to slide the navbar down when the user leaves the front page*/
 	document.onscroll = function(){
 		var scroll_top = window.pageYOffset || document.documentElement.scrollTop;
 		let bottom_landing = document.getElementsByClassName("landing_screen")[0].offsetHeight;
@@ -160,6 +161,23 @@
 			document.getElementById("navbar").style.top = "-10vh";
 		}
 	}
+
+	/*The dropdown display and hide is implemented here insead of with :hover in CSS to easily allow mobile functionality*/
+	//Browser specific functionality 
+	document.getElementsByClassName("dropdown_btn")[0].onmouseover = function(){
+		document.getElementsByClassName("dropdown_content")[0].style.display = "flex";
+	}
+	document.getElementsByTagName("main")[0].onmouseover = function(){
+		document.getElementsByClassName("dropdown_content")[0].style.display = "none";
+	}
+	//mobile specific functionality
+	document.getElementsByClassName("dropdown_btn")[0].onclick = function(){
+		document.getElementsByClassName("dropdown_content")[0].style.display = "flex";
+	}
+	document.addEventListener('click', function(e) {
+		document.getElementsByClassName("dropdown_content")[0].style.display = "none";
+	}, false);
+
 </script>
 
 </body>

@@ -97,11 +97,6 @@ nav li{
 }
 
 .dropdown_btn:hover .dropdown_content{
-	display: flex;
-}
-
-body:hover .dropdown_content{
-	display: none;	
 }
 
 .content {
