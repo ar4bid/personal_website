@@ -123,7 +123,7 @@ nav li{
 }
 
 .headshot_container {
-	width: 20%;
+	width: max(20%, 70px);
 	margin-right: 30px;
 }
 
