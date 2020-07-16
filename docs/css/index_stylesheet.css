@@ -100,7 +100,7 @@ nav li{
 	display: flex;
 }
 
-body:active .dropdown_content{
+body:hover .dropdown_content{
 	display: none;	
 }
 
