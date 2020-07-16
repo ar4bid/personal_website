@@ -24,7 +24,7 @@ p {
 }
 
 h3 {
-	font-size:24px;
+	font-size: min(24px, 25vw);
 }
 
 nav {
@@ -41,7 +41,7 @@ nav a{
 	float: left;
 	color: #f2f2f2;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: min(18px, 20vw);
 	padding-left: 0.5vw;
 	padding-right: 0.5vw;
 	z-index:2;
@@ -108,7 +108,7 @@ nav li{
 
 .logo {
 	font-weight: 400;
-	font-size: 24px;
+	font-size: min(24px,25vw);
 	padding-left:15px;
 	padding-right:15px;
 }
