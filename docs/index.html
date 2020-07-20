@@ -53,6 +53,7 @@
 		<p>The following is a list of projects I've developed with details regarding what went into them. Most projects were done independently and anything not made entirely by me will be marked as such.</p>
 		
 		<div class=section_subheading id="robotic_arm_control"></div>
+
 		<h3>Robotic Arm Control</h3>
 		<p>This project was designed for the Queen’s Space Engineering Team (QSET) during my undergrad. QSET took part in the University Rover Challenge where a number of undergraduate design teams competed with mock Mars rovers to complete tasks such as equipment servicing, astronaut assistance, and autonomous traversal. These tasks required precise teleoperated control of the rover and it’s manipulator. This project covers the control algorithms for the rover’s manipulator. The algorithms are written in C++ and implemented in the Robot Operating System (ROS). Below is an image of the robotic arm these algorithms were written for.</p>
 		<picture class=media_container>
@@ -74,6 +75,7 @@
 		</div>
 		<p>Source code for this project can be found at <a href='https://github.com/ar4bid/ros-arm-control'>https://github.com/ar4bid/ros-arm-control</a>.</p>
 		<div class=section_subheading id="robotic_driving_control"></div>
+
 		<h3>Robotic Driving Control</h3>
 		<p>This project was designed for QSET’s mock mars rover during my undergrad. See the Robotic Arm Control project for details about QSET. This project was written in C++ using ROS.</p>
 		<p>The control system for this project was designed with two separate control schemes. The first scheme, voltage control, is a simple fallback system which applies a voltage proportional to the user’s joystick input. In order to turn, the two sides of the rover are given differing voltages in order to ‘skid-steer’. This system is used as a fallback because it does not require any encoders to operate. However, this is not the preferred drive system because if no voltage is applied to the motors the rover will roll on hills as the holding torque of the inactive motors is very low. To counteract this, a PID controller is used where the user’s joystick position determines the velocity set point and velocity encoders on all wheels determine error terms for the PID controller. Using this system, when the joystick is at rest the wheels are held still, preventing rolling on hills. This control system can be seen in action in the video below.</p>
@@ -85,6 +87,7 @@
 		<p>Source code for this project can be found at: <a href=""https://github.com/ar4bid/ros-wheel-control>https://github.com/ar4bid/ros-wheel-control</a>.</p>
 
 		<div class=section_subheading id="orbit_sim"></div>
+
 		<h3>Solar System Formation Sim</h3>
 		<p>This simulator was written to learn JavaScript and explore how gravitational laws result in the emergence of solar system structures. The simulator does not follow SI units but instead mass and distance are scaled to allow planets/asteroid bodies to orbit within the user’s viewport. </p>
 		<p>The simulator employs leapfrog integration to solve the differential equations that govern the bodies’ motion. Leapfrog integration updates bodies in a ‘kick and drift’ style where the position, velocity, and acceleration of a body are updated at staggered steps. This method is stable for oscillating systems. For more information, Wikipedia offers a relatively good introduction to this algorithm <a href="https://en.wikipedia.org/wiki/Leapfrog_integration">en.wikipedia.org/wiki/Leapfrog_integration</a>.</p>
@@ -114,6 +117,7 @@
 		<p>The source code for this project can be found at <a href="https://github.com/ar4bid/orbital_sim/tree/master/planet_sim">github.com/ar4bid/orbital_sim/tree/master/planet_sim</a> and the simulator can be run at <a href="https://ar4bid.github.io/orbital_sim/">ar4bid.github.io/orbital_sim/</a>.</p>
 		
 		<div class=section_subheading id="ma_printer"></div>
+
 		<h3>Metal Additive 3D Printer</h3>
 		<p>This project is not a software engineering project. It is instead a mechanical engineering project focused on fluid dynamics performed for my undergraduate thesis. I chose this project out of a desire to learn more about metal additive (MA) 3d printing and I think it is interesting enough to briefly discuss here, despite not being software related. This project description will only focus on a couple topics from my thesis.</p>
 		<p>This project is concerned with the redesign of the gas flow system in a MA printer. This gas flow serves the purpose of removing fumes and ejected particles from the point where metal is being melted by the printer’s laser. Ejected metal particles should be swept out of the built chamber and should not be allowed to redeposit on the build surface. As such, laminar flow is very desirable. This is because turbulent flow runs the risk of picking up additional metal particles from the  build surface and will not consistently bring entrained particles to the outlet. Below is a screenshot from an ANSYS simulation showing the original gas flow from when I started this project. The gas inlet is on the right and the outlet is on the left.</p>
@@ -126,6 +130,7 @@
 		</picture>
 		<p>Metal particles would be allowed to enter in through the baffles at the bottom but would be unable to exit at the top, forcing them through the outlet at the top left. Importantly the flow of gas over the print area is a very consistent laminar flow and does not dip to pick up extra metal particles.</p>
 		<div class=section_subheading id="balancing_cube"></div>
+
 		<h3>Balancing a Cube with a Reaction Wheel</h3>
 		<p>This project was performed for my capstone during my undergrad and was done in conjunction with a few other software engineers. The goal of this project was to build a cube like a cube satellite that could balance on an edge similar to the cubli seen here: <a href="https://www.youtube.com/watch?v=n_6p-1J551Y">youtube.com/watch?v=n_6p-1J551Y</a>. While the cubli employed non-linear controllers to stay balanced, we first attempted using a neural network control policy and a then PID controller. These controllers were run on an Arduino which sent signals to a motor controller, driving a brushless motor. The neural network was able to learn a stable control policy in simulation but the physics model running in simulation was not close enough to the real life system and as such it failed to control the cube effectively. The PID controller worked relatively well but would balance about a point slightly off from center causing the reaction wheel to constantly impart more angular momentum to keep the cube still. In this scenario the motor eventually saturates and the cube falls. This behavior can be seen below in two separate test rigs. The inaccurate balancing point is likely due to noise and imprecisions in the inertial measurement unit (IMU). As such a secondary IMU and/or a Kalman filter may have helped this problem.</p>
 		<div class="media_container">
@@ -138,18 +143,20 @@
 		</div>
 		<p>Unfortunately, this is as far as this project went due to time constraints. This was however a very good learning opportunity about scope control under project deadlines. In hindsight, we should have focused our efforts on a single control scheme and while neural networks are very interesting it would have been better to focus on control methods founded in the domain of control theory. This would have likely resulted in faster progress as this inverted pendulum style problem has been well analyzed in control theory already.</p>
 		<div class=section_subheading id="drone_flight_computer"></div>
+
 		<h3>Drone Flight Computer (Active Project)</h3>
 		<p>The goal of this project is to learn more about control theory and optimal controllers (likely not PID controllers). While there isn’t much to show for this project as of yet I still feel it would be interesting to touch on what I have done so far and what I plan to do for this project.</p>
 		<p>As of now I’ve written a small front end webpage and a node.js server to read input from an Xbox controller in order to control a single motor. This is done by reading input from the controller into the webpage and creating a post request which transfers the controller input data to the node server. The server then sends serial commands to an Arduino which drives a PWM signal, controlling a motor controller. Next, I will need to connect multiple motors and motor controllers, and 3D print a frame for the drone.</p>
 		<p>In the future, the Arduino will be connected to a radio transceiver which will broadcast messages to the flight computer on the drone. The flight computer will likely be an STM32F series microcontroller because I have some experience with these MCUs. I will likely broadcast mostly unprocessed controller input to the flight computer and allow it to perform most processing and control decisions. I will first attempt to perform little control on the flight computer to allow the user to make decisions on how to keep the drone flying level and stable. This is similar to how racing drones operate. However, this relies on all motors being driven exactly the same by all motor controllers which may not prove to be true. If this does not work a more complex control method may be needed with some form of motor or orientation feedback. Following this I hope to write a controller which will perform dynamic balancing and station keeping similar to most commercial drones. As mentioned earlier I hope to do this with an optimal controller that is not a PID controller as I feel the need to broaden my controls knowledge.</p>
 		<div class=section_subheading id="path_planning"></div>
+
 		<h3>Path Planning Algorithm Visualizer (Active Project)</h3>
-		<p>This project has been undertaken to learn path planning algorithms and to continue my practice of JavaScript. As of now the a nice UI and grid has been built and Dijkstra’s algorithm has been implemented. The algorithm finds a shortest path from the start point (green) to an end point (red) without passing through walls (grey). Below is a short demo of what has been completed so far.</p>
+		<p>This project has been undertaken to learn path planning algorithms and to continue my practice of JavaScript. As of now a UI and grid have been built and Dijkstra’s algorithm has been implemented. The algorithm finds a shortest path from the start point (green) to an end point (red) without passing through walls (grey). Below is a short demo of what has been completed so far.</p>
 		<div class="media_container">
 			<video class=media controls>
 				<source src="./resources/dijkstra.mp4" type=video/mp4>
 		</div>
-		<p>The goal for the rest of this project beyond bug fixes, is at least a few more path planning algorithms to choose from including A*, and some preset mazes. A stretch goal would be to implement randomly generated mazes.</p>
+		<p>The goal for the rest of this project beyond bug fixes, is to implement at least a few more path planning algorithms including A*, and implement some preset mazes. A stretch goal would be to implement randomly generated mazes.</p>
 		<p>The source for this project is at <a href="https://github.com/ar4bid/path_planning">github.com/ar4bid/path_planning</a> and the project can be run at <a href="https://ar4bid.github.io/path_planning/">https://ar4bid.github.io/path_planning/</a>.</p>
 	
 	</section>
