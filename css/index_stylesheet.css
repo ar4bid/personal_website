@@ -45,7 +45,7 @@ nav a{
 	float: left;
 	color: #f2f2f2;
 	text-decoration: none;
-	font-size: min(18px, 4vw);
+	font-size: min(min(18px, 4vw), 4vh);
 	padding-left: 1vw;
 	padding-right: 1vw;
 	z-index:2;
@@ -91,7 +91,7 @@ nav li{
 	position: absolute;
 	flex-direction: column;	
 	top: 10vh;
-	width: max(100%, 25vw);
+	width: max(100%, 40vw);
 	height: max-content;
 }
 
