@@ -36,7 +36,7 @@ nav {
 	position: fixed;
 	top: -10vh;
 	width: 100%;
-	height: 10vh;
+	height: max-content;
 	z-index:1;
 	transition: top 0.3s;
 }
@@ -91,7 +91,7 @@ nav li{
 	position: absolute;
 	flex-direction: column;	
 	top: 10vh;
-	width: max(100%, 40vw);
+	width: max(100%, 32vw);
 	height: max-content;
 }
 
