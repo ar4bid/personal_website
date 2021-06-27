@@ -25,7 +25,7 @@
 				<li><a href="#ma_printer">Metal Additive 3D Printer</a></li>
 				<li><a href="#balancing_cube">Balancing a Cube with a Reaction Wheel</a></li>
 				<li><a href="#drone_flight_computer">Drone Flight Computer (Active Project)</a></li>
-				<li><a href="#path_planning">Path Planning Algorithm Visualizer (Active Project)</a></li>
+				<li><a href="#path_planning">Path Planning Algorithm Visualizer</a></li>
 			</ul>
 		</li>
 		<li><a href="#contact_info" id="nav_contact_info">CONTACT</a></li>
@@ -43,7 +43,7 @@
 			</picture>
 			<h2 class=section_heading>About Me</h2>
 		</div>	
-	<p>Hi, my name is Alex and this is my portfolio. I’m a 2020 Queen’s University graduate with a Bachelor of Applied Science in Physics, specialized in computing. I’m aspiring to join a team where I can apply my passions and lend my experience in software engineering, aerospace engineering, and robotics.</p>
+	<p>Hi, my name is Alex and this is my portfolio. I’m a software engineer, currently leading development of a metal 3D printer's softare. I’m also a 2020 Queen’s University graduate with a Bachelor of Applied Science in Physics, specialized in computing. I love working on teams where I can apply my passions and lend my experience in software engineering, aerospace engineering, and robotics.</p>
 	<p>Through work and personal projects I become heavily invested in the projects I work on. I get a great deal of satisfaction from seeing my projects and ideas implemented, and I love seeing my end-user enjoy using what I’ve made as much as I enjoyed making it.</p>
 	<p>I also have a love of space exploration and the engineering involved. I’ve been a key member of teams that build amateur satellites and rovers and I hope to one day be a key member of the teams that push humanity to go beyond Earth. To do so I’m pushing myself to hone my skills in software engineering through projects and well-chosen work opportunities.</p>
 	<p>I’ve also developed a recent interest in neural networks and machine learning, particularly in robotics applications. I’ve decided to independently advance my education of machine learning systems through research and personal projects. I hope to gain experience in this area with work opportunities and mentors in the software engineering community.</p>
@@ -52,6 +52,16 @@
 		<h2 class=section_heading>Projects</h2>
 		<p>The following is a list of projects I've developed with details regarding what went into them. Most projects were done independently and anything not made entirely by me will be marked as such.</p>
 		
+		<p>
+			<a href="#robotic_arm_control">Robotic Arm Control</a><br>
+			<a href="#robotic_driving_control">Robotic Driving Control</a><br>
+			<a href="#orbit_sim">Solar System Formation Sim</a><br>
+			<a href="#ma_printer">Metal Additive 3D Printer</a><br>
+			<a href="#balancing_cube">Balancing a Cube with a Reaction Wheel</a><br>
+			<a href="#drone_flight_computer">Drone Flight Computer (Active Project)</a><br>
+			<a href="#path_planning">Path Planning Algorithm Visualizer</a>
+		</p>
+
 		<div class=section_subheading id="robotic_arm_control"></div>
 
 		<h3>Robotic Arm Control</h3>
@@ -150,7 +160,7 @@
 		<p>In the future, the Arduino will be connected to a radio transceiver which will broadcast messages to the flight computer on the drone. The flight computer will likely be an STM32F series microcontroller because I have some experience with these MCUs. I will likely broadcast mostly unprocessed controller input to the flight computer and allow it to perform most processing and control decisions. I will first attempt to perform little control on the flight computer to allow the user to make decisions on how to keep the drone flying level and stable. This is similar to how racing drones operate. However, this relies on all motors being driven exactly the same by all motor controllers which may not prove to be true. If this does not work a more complex control method may be needed with some form of motor or orientation feedback. Following this I hope to write a controller which will perform dynamic balancing and station keeping similar to most commercial drones. As mentioned earlier I hope to do this with an optimal controller that is not a PID controller as I feel the need to broaden my controls knowledge.</p>
 		<div class=section_subheading id="path_planning"></div>
 
-		<h3>Path Planning Algorithm Visualizer (Active Project)</h3>
+		<h3>Path Planning Algorithm Visualizer</h3>
 		<p>This project has been undertaken to learn path planning algorithms and to continue my practice of JavaScript. As of now a UI and grid have been built and Dijkstra’s algorithm has been implemented. The algorithm finds a shortest path from the start point (green) to an end point (red) without passing through walls (grey). Below is a short demo of what has been completed so far.</p>
 		<div class="media_container">
 			<video class=media controls>
