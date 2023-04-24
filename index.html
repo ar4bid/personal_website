@@ -21,11 +21,11 @@
 			<ul class="dropdown_content">
 				<li><a href="#robotic_arm_control">Robotic Arm Control</a></li>
 				<li><a href="#robotic_driving_control">Robotic Driving Control</a></li>
-				<li><a href="#orbit_sim">Solar System Formation Sim</a></li>
-				<li><a href="#ma_printer">Metal Additive 3D Printer</a></li>
+				<li><a href="#orbit_sim">Solar System Formation Simulator</a></li>
+				<li><a href="#gas_design">Gas Flow System Redesign</a></li>
 				<li><a href="#balancing_cube">Balancing a Cube with a Reaction Wheel</a></li>
-				<li><a href="#drone_flight_computer">Drone Flight Computer (Active Project)</a></li>
 				<li><a href="#path_planning">Path Planning Algorithm Visualizer</a></li>
+				<li><a href="#personal_website">Personal Website</a></li>
 			</ul>
 		</li>
 		<li><a href="#contact_info" id="nav_contact_info">CONTACT</a></li>
@@ -43,10 +43,10 @@
 			</picture>
 			<h2 class=section_heading>About Me</h2>
 		</div>	
-	<p>Hi, my name is Alex and this is my portfolio. I’m a software engineer, currently leading development of a metal 3D printer's software. I’m also a 2020 Queen’s University graduate with a Bachelor of Applied Science in Physics, specialized in computing. I love working on teams where I can apply my passions and lend my experience in software engineering, aerospace engineering, and robotics.</p>
-	<p>Through work and personal projects I become heavily invested in the projects I work on. I get a great deal of satisfaction from seeing my projects and ideas implemented, and I love seeing my end-user enjoy using what I’ve made as much as I enjoyed making it.</p>
-	<p>I also have a love of space exploration and the engineering involved. I’ve been a key member of teams that build amateur satellites and rovers and I hope to one day be a key member of the teams that push humanity to go beyond Earth. To do so I’m pushing myself to hone my skills in software engineering through projects and well-chosen work opportunities.</p>
-	<p>I’ve also developed a recent interest in neural networks and machine learning, particularly in robotics applications. I’ve decided to independently advance my education of machine learning systems through research and personal projects. I hope to gain experience in this area with work opportunities and mentors in the software engineering community.</p>
+	<p>Hello, my name is Alex, and welcome to my professional portfolio. As a dedicated software engineer, I have been spearheading the development of a cutting-edge metal 3D printer's software since 2020. I am proud to hold a Bachelor of Applied Science in Physics with a specialization in computing from Queen's University, Class of 2020. My passion for software engineering, aerospace engineering, and robotics drives me to excel in collaborative environments where I can make a meaningful impact.</p>
+	<p>Throughout my career, I have devoted myself wholeheartedly to both professional and personal projects, deriving immense satisfaction from seeing my ideas come to life and observing end-users enjoying the fruits of my labor. My commitment to delivering exceptional results is matched only by my enthusiasm for the work I do.</p>
+	<p>My journey into programming began during my engineering design team days at school, and ever since then, I have been captivated by the endless possibilities it offers. With a strong foundation in C# and C++, I have immersed myself in various software engineering specializations, including robotics, web development, game engine design, and machine learning. This diverse range of experiences has fueled my passion for tackling innovative projects and honing my skills as I advance in my professional career.</p>
+	<p>As you explore my portfolio, you will find a showcase of some of the projects that have shaped my journey thus far. I am excited to share my story and eager to embark on new challenges and opportunities that lie ahead. Let's create extraordinary solutions together!</p>
 	</section>
 	<section id="projects" class="content">
 		<h2 class=section_heading>Projects</h2>
@@ -55,65 +55,71 @@
 		<p>
 			<a href="#robotic_arm_control">Robotic Arm Control</a><br>
 			<a href="#robotic_driving_control">Robotic Driving Control</a><br>
-			<a href="#orbit_sim">Solar System Formation Sim</a><br>
-			<a href="#ma_printer">Metal Additive 3D Printer</a><br>
+			<a href="#orbit_sim">Solar System Formation Simulator</a><br>
+			<a href="#gas_design">Gas Flow System Redesign</a><br>
 			<a href="#balancing_cube">Balancing a Cube with a Reaction Wheel</a><br>
-			<a href="#drone_flight_computer">Drone Flight Computer (Active Project)</a><br>
-			<a href="#path_planning">Path Planning Algorithm Visualizer</a>
+			<a href="#path_planning">Path Planning Algorithm Visualizer</a><br>
+			<a href="#personal_website">Personal Website</a>
 		</p>
 
 		<div class=section_subheading id="robotic_arm_control"></div>
 
 		<h3>Robotic Arm Control</h3>
-		<p>This project was designed for the Queen’s Space Engineering Team (QSET) during my undergrad. QSET took part in the University Rover Challenge where a number of undergraduate design teams competed with mock Mars rovers to complete tasks such as equipment servicing, astronaut assistance, and autonomous traversal. These tasks required precise teleoperated control of the rover and it’s manipulator. This project covers the control algorithms for the rover’s manipulator. The algorithms are written in C++ and implemented in the Robot Operating System (ROS). Below is an image of the robotic arm these algorithms were written for.</p>
+		<p>During my undergraduate studies, I had the privilege of serving as the Chief Technology Officer (CTO) for the Queen's Space Engineering Team (QSET). In this role, I contributed to the development of a robotic arm control system for a mock Mars rover. QSET participated in the University Rover Challenge, where various undergraduate design teams competed with their rover designs to complete tasks such as equipment servicing, astronaut assistance, and autonomous traversal. These tasks demanded precise teleoperated control of the rover and its manipulator. This project focuses on the control algorithms I wrote for the rover's manipulator, which are written in C++ and implemented using the Robot Operating System (ROS). The image below showcases the robotic arm for which these algorithms were developed.</p>
 		<picture class=media_container>
 			<img src="./resources/robot_arm.jpg" class=media>
 		</picture>
-		<p>The arm control system was divided into three separate programs; joint control, angle control, and position control.</p>
-		<p><b>Joint control</b> allows the user to select a single joint motor and applies a voltage proportional to the user’s joystick input. This system was used as a fallback incase of encoder failure as it is the only system that does not require encoders to operate. In the short video below notice how only a single joint motor is being driven when using joint control. This is not a desirable primary control scheme because operating a robotic arm one joint at a time is tedious and unintuitive as almost all motion occurs in arcs.</p>
+		<p>The arm control system comprises three distinct programs: joint control, angle control, and position control.</p>
+		<h5>Joint Control</h5>
+		<p>Joint control allows the user to select a single joint motor and apply a voltage proportional to their joystick input. This system serves as a fallback in case of encoder failure, as it does not rely on encoders for operation. However, joint control is not an ideal primary control scheme due to its tedious and unintuitive nature, as nearly all motion occurs in arcs. The video below demonstrates joint control, showing how only one joint motor is driven at a time.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/joint_control.mp4" type=video/mp4>
 			</video> 
 		</div>
-		<p><b>Angle control</b> employs a set of PID controllers to set a single joint to a desired angle. This system requires the use of position encoders to determine the current angle of the given joint so that an error term can be fed back into the PID controller. This control scheme is a precursor to position control.</p>
-		<p><b>Position Control</b> employs inverse kinematics to allow the arm’s end-effector to track in the x-y plane instead of in arcs. This is achieved by first calculating the end-effector’s position in x-y and then applying offset proportional to the user’s joystick input. This newly offset coordinate is then used as the desired position of the end-effector and inverse kinematic trigonometry calculates the desired angles of each arm joint in order to achieve the desired x-y coordinate. These desired angles are then fed into the angle control system which drives the motors. Below is a short video of position control in action. Notice how the ‘shoulder’ and ‘elbow’ of the robotic arm work in tandem to achieve linear motion of the end-effector.</p>
+		<h5>Angle Control</h5>
+		<p>Angle control utilizes a set of PID controllers to set a single joint to a desired angle. This system requires position encoders to determine the current angle of a given joint, allowing for an error term to be fed back into the PID controller. Angle control is a precursor to the more advanced position control.</p>
+		<h5>Position Control</h5>
+		<p>Position control employs inverse kinematics to enable the arm's end-effector to track in the x-y plane, rather than in arcs. This is accomplished by calculating the end-effector's position in the x-y plane and applying an offset proportional to the user's joystick input. The resulting offset coordinate serves as the desired position of the end-effector, and inverse kinematic trigonometry calculates the required angles for each arm joint to achieve the desired x-y coordinate. These angles are then fed into the angle control system, which drives the motors. The video below illustrates position control in action, highlighting how the robotic arm's "shoulder" and "elbow" work together to facilitate linear motion of the end-effector.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/position_control.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>Source code for this project can be found at <a href='https://github.com/ar4bid/ros-arm-control'>https://github.com/ar4bid/ros-arm-control</a>.</p>
+
 		<div class=section_subheading id="robotic_driving_control"></div>
 
 		<h3>Robotic Driving Control</h3>
-		<p>This project was designed for QSET’s mock mars rover during my undergrad. See the Robotic Arm Control project for details about QSET. This project was written in C++ using ROS.</p>
-		<p>The control system for this project was designed with two separate control schemes. The first scheme, voltage control, is a simple fallback system which applies a voltage proportional to the user’s joystick input. In order to turn, the two sides of the rover are given differing voltages in order to ‘skid-steer’. This system is used as a fallback because it does not require any encoders to operate. However, this is not the preferred drive system because if no voltage is applied to the motors the rover will roll on hills as the holding torque of the inactive motors is very low. To counteract this, a PID controller is used where the user’s joystick position determines the velocity set point and velocity encoders on all wheels determine error terms for the PID controller. Using this system, when the joystick is at rest the wheels are held still, preventing rolling on hills. This control system can be seen in action in the video below.</p>
+		<p>During my time as the Chief Technology Officer (CTO) of the Queen's Space Engineering Team (QSET), I developed a drive control system for our mock Mars rover. For further details about QSET and the rover's robotic arm control, please refer to the Robotic Arm Control project. This particular project was written in C++ using the Robot Operating System (ROS).</p>
+		<p>The control system for this project was designed with two separate control schemes: voltage control and PID-controlled velocity control.</p>
+		<h5>Voltage Control</h5>
+		<p>Voltage control is a simple fallback system that applies a voltage proportional to the user's joystick input. To facilitate turning, the two sides of the rover receive differing voltages, allowing it to 'skid-steer'. This system is employed as a fallback because it does not require any encoders to operate. However, it is not the preferred drive system due to the low holding torque of the inactive motors when no voltage is applied, which can cause the rover to roll on hills.</p>
+		<h5>Velocity Control</h5>
+		<p>To address the limitations of the voltage control system, a PID controller is utilized. In this scheme, the user's joystick position determines the velocity set point, while velocity encoders on all wheels provide error terms for the PID controller. When the joystick is at rest, this system holds the wheels still, preventing the rover from rolling on hills. The video below demonstrates the PID-controlled velocity control system in action.</p>
 		<div class="media_container">
 			<video class=media controls>
 				<source src="./resources/rover_driving.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>Source code for this project can be found at: <a href=""https://github.com/ar4bid/ros-wheel-control>https://github.com/ar4bid/ros-wheel-control</a>.</p>
 
 		<div class=section_subheading id="orbit_sim"></div>
 
-		<h3>Solar System Formation Sim</h3>
-		<p>This simulator was written to learn JavaScript and explore how gravitational laws result in the emergence of solar system structures. The simulator does not follow SI units but instead mass and distance are scaled to allow planets/asteroid bodies to orbit within the user’s viewport. </p>
-		<p>The simulator employs leapfrog integration to solve the differential equations that govern the bodies’ motion. Leapfrog integration updates bodies in a ‘kick and drift’ style where the position, velocity, and acceleration of a body are updated at staggered steps. This method is stable for oscillating systems. For more information, Wikipedia offers a relatively good introduction to this algorithm <a href="https://en.wikipedia.org/wiki/Leapfrog_integration">en.wikipedia.org/wiki/Leapfrog_integration</a>.</p>
-		<p>When adding bodies to the simulation, velocity can be added by clicking and holding the mouse and pulling back like a slingshot. The predicted path the body will take is then computed by stepping the simulation forward briefly. This can be seen in the following video.</p>
+		<h3>Solar System Formation Simulator</h3>
+		<p>The Solar System Formation Simulator is a project I developed to deepen my understanding of JavaScript and explore the emergence of solar system structures through the application of gravitational laws.</p>
+		<p>This simulator employs the leapfrog integration method to solve the differential equations governing the motion of celestial bodies. Leapfrog integration updates the position, velocity, and acceleration of a body in a 'kick and drift' manner using staggered steps, making it stable for oscillating systems. For a more comprehensive introduction to this algorithm, refer to the Wikipedia article at <a href="https://en.wikipedia.org/wiki/Leapfrog_integration">en.wikipedia.org/wiki/Leapfrog_integration</a>.</p>
+		<p>When adding celestial bodies to the simulation, users can apply velocity by clicking and holding the mouse, then pulling back like a slingshot. The simulator then computes the predicted path of the body by briefly stepping forward in the simulation. The following video demonstrates this functionality.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/orbit_prediction.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>For collisions, this simulator enforces conservation of linear momentum with completely inelastic collisions. As such when two bodies collide their mass is combined to form one body and the resulting body’s radius is adjusted based on the predetermined constant density for all bodies in the simulator. Finally, the velocity of the resulting body is adjusted to ensure momentum is conserved. The following video shows this behavior.</p>
+		<p>In terms of collision handling, the simulator enforces the conservation of linear momentum through completely inelastic collisions. When two bodies collide, their masses combine to form a single body, and the resulting body's radius is adjusted based on a predetermined constant density for all bodies within the simulator. To ensure momentum conservation, the velocity of the resulting body is also adjusted accordingly. The subsequent video showcases this behavior.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/collisions.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>A few pre-set options are implemented to observe solar system structure emergence. These include random asteroid belts, and asteroid scatterings which are shown in the next two videos.</p>
+		<p>The simulator also features several pre-set options to observe the emergence of solar system structures. These include random asteroid belts and asteroid scatterings, as demonstrated in the next two videos.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/asteroid_belt.mp4" type=video/mp4>
@@ -124,25 +130,27 @@
 				<source src="./resources/asteroid_scatter.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>The source code for this project can be found at <a href="https://github.com/ar4bid/orbital_sim/tree/master/planet_sim">github.com/ar4bid/orbital_sim/tree/master/planet_sim</a> and the simulator can be run at <a href="https://ar4bid.github.io/orbital_sim/">ar4bid.github.io/orbital_sim/</a>.</p>
 		
-		<div class=section_subheading id="ma_printer"></div>
+		<div class=section_subheading id="gas_design"></div>
 
-		<h3>Metal Additive 3D Printer</h3>
-		<p>This project is not a software engineering project. It is instead a mechanical engineering project focused on fluid dynamics performed for my undergraduate thesis. I chose this project out of a desire to learn more about metal additive (MA) 3d printing and I think it is interesting enough to briefly discuss here, despite not being software related. This project description will only focus on a couple topics from my thesis.</p>
-		<p>This project is concerned with the redesign of the gas flow system in a MA printer. This gas flow serves the purpose of removing fumes and ejected particles from the point where metal is being melted by the printer’s laser. Ejected metal particles should be swept out of the built chamber and should not be allowed to redeposit on the build surface. As such, laminar flow is very desirable. This is because turbulent flow runs the risk of picking up additional metal particles from the  build surface and will not consistently bring entrained particles to the outlet. Below is a screenshot from an ANSYS simulation showing the original gas flow from when I started this project. The gas inlet is on the right and the outlet is on the left.</p>
+		<h3>Gas Flow System Redesign</h3>
+		<p>While my primary focus lies in software engineering, I also undertook a mechanical engineering project during my undergraduate studies, exploring fluid dynamics for my thesis. This project aimed to redesign the gas flow system in a metal additive (MA) selective laser melting (SLM) 3D printer, and I believe it is interesting enough to discuss here, despite not being software-related.</p>
+		<p>SLM 3D printers require efficient gas flow systems to remove fumes and ejected particles from the point where the metal is being melted by the printer's laser. It is crucial to ensure that ejected metal particles are swept out of the build chamber and not allowed to redeposit on the build surface. Consequently, laminar flow is highly desirable, as turbulent flow may pick up additional metal particles from the build surface and fail to consistently transport entrained particles to the outlet.</p>
+		<p>The initial ANSYS simulation (see the screenshot below) revealed non-uniform and turbulent flow within the build chamber, with the gas inlet on the right and the outlet on the left.</p>
 		<picture class=media_container>
 			<img src="./resources/original_ma_printer.jpg" width=60%>
 		</picture>
-		<p>Notice the inconsistencies in velocity through the fluid. This non uniform flow fluctuates and moves about as the simulation runs, suggesting very turbulent flow. After a number of design iterations an improved chamber was designed, mimicking the behavior of a fume hood. That is, baffles were added to force the gas to cycle through the chamber, placing a downward pressure of the gas that is entering from the inlet nozzle on the right as seen in the image below.</p>
+		<p>After several design iterations, an improved chamber design was developed, which mimicked the behavior of a fume hood. Baffles were added to force the gas to cycle through the chamber, exerting downward pressure on the gas entering from the inlet nozzle on the right, as seen in the image below.</p>
 		<picture class=media_container>
 			<img src="./resources/modified_ma_printer.jpg" width=60%>
 		</picture>
-		<p>Metal particles would be allowed to enter in through the baffles at the bottom but would be unable to exit at the top, forcing them through the outlet at the top left. Importantly the flow of gas over the print area is a very consistent laminar flow and does not dip to pick up extra metal particles.</p>
+		<p>This design allows metal particles to enter through the baffles at the bottom but prevents them from exiting at the top, forcing the particles through the outlet at the top left. Most importantly, the flow of gas over the print area is a consistent laminar flow, ensuring it does not dip to pick up additional metal particles.</p>
+		
 		<div class=section_subheading id="balancing_cube"></div>
 
 		<h3>Balancing a Cube with a Reaction Wheel</h3>
-		<p>This project was performed for my capstone during my undergrad and was done in conjunction with a few other software engineers. The goal of this project was to build a cube like a cube satellite that could balance on an edge similar to the cubli seen here: <a href="https://www.youtube.com/watch?v=n_6p-1J551Y">youtube.com/watch?v=n_6p-1J551Y</a>. While the cubli employed non-linear controllers to stay balanced, we first attempted using a neural network control policy and a then PID controller. These controllers were run on an Arduino which sent signals to a motor controller, driving a brushless motor. The neural network was able to learn a stable control policy in simulation but the physics model running in simulation was not close enough to the real life system and as such it failed to control the cube effectively. The PID controller worked relatively well but would balance about a point slightly off from center causing the reaction wheel to constantly impart more angular momentum to keep the cube still. In this scenario the motor eventually saturates and the cube falls. This behavior can be seen below in two separate test rigs. The inaccurate balancing point is likely due to noise and imprecisions in the inertial measurement unit (IMU). As such a secondary IMU and/or a Kalman filter may have helped this problem.</p>
+		<p>During my undergraduate capstone project, I collaborated with a team of software engineers to design a cube satellite that could balance on an edge, similar to the Cubli seen here: <a href="youtube.com/watch?v=n_6p-1J551Y">youtube.com/watch?v=n_6p-1J551Y</a>. Our team attempted to use a neural network control policy and a PID controller to achieve balance. I was responsible for writing motor control, IMU reading, and the PID controller. Everything was implemented on an Arduino, which sent signals to a motor controller that drove a brushless motor.</p>
+		<p>While the neural network successfully learned a stable control policy in simulation, the physics model in the simulation did not accurately represent the real-life system, resulting in ineffective control of the cube. The PID controller performed relatively well but balanced slightly off-center, causing the reaction wheel to continuously impart more angular momentum to maintain the cube's stillness. Eventually, the motor saturated, and the cube fell. This behavior can be observed in the two separate test rigs below. The inaccurate balancing point is likely due to noise and imprecisions in the inertial measurement unit (IMU). Incorporating a secondary IMU and/or a Kalman filter might have addressed this issue.</p>
 		<div class="media_container">
 			<video class=vertical_media controls>
 				<source src="./resources/cube_balance.mp4" type=video/mp4>
@@ -151,23 +159,22 @@
 				<source src="./resources/cube_plate_balance.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>Unfortunately, this is as far as this project went due to time constraints. This was however a very good learning opportunity about scope control under project deadlines. In hindsight, we should have focused our efforts on a single control scheme and while neural networks are very interesting it would have been better to focus on control methods founded in the domain of control theory. This would have likely resulted in faster progress as this inverted pendulum style problem has been well analyzed in control theory already.</p>
-		<div class=section_subheading id="drone_flight_computer"></div>
+		<p>Unfortunately, due to time constraints, the project did not progress beyond this point. Nevertheless, it provided valuable insights into scope control and project management under tight deadlines. In retrospect, we should have focused on a single control scheme. While neural networks are fascinating, it would have been more effective to concentrate on control methods rooted in control theory, which could have resulted in faster progress, given that the inverted pendulum problem has been extensively analyzed in control theory.</p>
 
-		<h3>Drone Flight Computer (Active Project)</h3>
-		<p>The goal of this project is to learn more about control theory and optimal controllers (likely not PID controllers). While there isn’t much to show for this project as of yet I still feel it would be interesting to touch on what I have done so far and what I plan to do for this project.</p>
-		<p>As of now I’ve written a small front end webpage and a node.js server to read input from an Xbox controller in order to control a single motor. This is done by reading input from the controller into the webpage and creating a post request which transfers the controller input data to the node server. The server then sends serial commands to an Arduino which drives a PWM signal, controlling a motor controller. Next, I will need to connect multiple motors and motor controllers, and 3D print a frame for the drone.</p>
-		<p>In the future, the Arduino will be connected to a radio transceiver which will broadcast messages to the flight computer on the drone. The flight computer will likely be an STM32F series microcontroller because I have some experience with these MCUs. I will likely broadcast mostly unprocessed controller input to the flight computer and allow it to perform most processing and control decisions. I will first attempt to perform little control on the flight computer to allow the user to make decisions on how to keep the drone flying level and stable. This is similar to how racing drones operate. However, this relies on all motors being driven exactly the same by all motor controllers which may not prove to be true. If this does not work a more complex control method may be needed with some form of motor or orientation feedback. Following this I hope to write a controller which will perform dynamic balancing and station keeping similar to most commercial drones. As mentioned earlier I hope to do this with an optimal controller that is not a PID controller as I feel the need to broaden my controls knowledge.</p>
 		<div class=section_subheading id="path_planning"></div>
 
 		<h3>Path Planning Algorithm Visualizer</h3>
-		<p>This project has been undertaken to learn path planning algorithms and to continue my practice of JavaScript. As of now a UI and grid have been built and Dijkstra’s algorithm has been implemented. The algorithm finds a shortest path from the start point (green) to an end point (red) without passing through walls (grey). Below is a short demo of what has been completed so far.</p>
+		<p>I embarked on this project to learn about path planning algorithms and further develop my JavaScript skills. To date, I have constructed a user interface and grid for visualization of Dijkstra's algorithm. This algorithm finds the shortest path from the starting point (green) to the endpoint (red) without passing through walls (grey). Below is a brief demonstration of the progress made thus far.</p>
 		<div class="media_container">
 			<video class=media controls>
 				<source src="./resources/dijkstra.mp4" type=video/mp4>
 		</div>
-		<p>The goal for the rest of this project beyond bug fixes, is to implement at least a few more path planning algorithms including A*, and implement some preset mazes. A stretch goal would be to implement randomly generated mazes.</p>
-		<p>The source for this project is at <a href="https://github.com/ar4bid/path_planning">github.com/ar4bid/path_planning</a> and the project can be run at <a href="https://ar4bid.github.io/path_planning/">https://ar4bid.github.io/path_planning/</a>.</p>
+		<p>As I continue with this project, my objectives include implementing additional path planning algorithms, such as A*, and incorporating preset mazes. Additionally, I aim to explore the possibility of integrating randomly generated solvable mazes.</p>
+	
+		<div class=section_subheading id="personal_website"></div>
+
+		<h3>Personal Website</h3>
+		<p>As you may have already noticed, this portfolio site itself is also one of my personal projects. Instead of using a website-building tool, I handcrafted it using HTML and CSS. The custom script for the navbar's show/hide functionality when entering or leaving the landing page was also developed by me. I chose to build this website from scratch to pique my curiosity and gain hands-on experience in the fundamentals of web development.</p>
 	
 	</section>
 	<section id="contact_info" class="content">

@@ -27,10 +27,6 @@ p a{
 	overflow-wrap: break-word;
 }
 
-h3 {
-	font-size: min(24px, 5vw);
-}
-
 nav {
 	background-color: #2c3136;
 	position: fixed;
@@ -92,7 +88,9 @@ nav li{
 	flex-direction: column;	
 	top: 10vh;
 	width: max(100%, 32vw);
+	max-height: 50vh;
 	height: max-content;
+	overflow: auto;
 }
 
 .dropdown_content a {
