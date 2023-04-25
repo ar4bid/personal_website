@@ -91,7 +91,7 @@
 
 		<h3>Robotic Driving Control</h3>
 		<p>During my time as the Chief Technology Officer (CTO) of the Queen's Space Engineering Team (QSET), I developed a drive control system for our mock Mars rover. For further details about QSET and the rover's robotic arm control, please refer to the Robotic Arm Control project. This particular project was written in C++ using the Robot Operating System (ROS).</p>
-		<p>The control system for this project was designed with two separate control schemes: voltage control and PID-controlled velocity control.</p>
+		<p>The control system for this project was designed with two separate control schemes: voltage control and velocity control.</p>
 		<h5>Voltage Control</h5>
 		<p>Voltage control is a simple fallback system that applies a voltage proportional to the user's joystick input. To facilitate turning, the two sides of the rover receive differing voltages, allowing it to 'skid-steer'. This system is employed as a fallback because it does not require any encoders to operate. However, it is not the preferred drive system due to the low holding torque of the inactive motors when no voltage is applied, which can cause the rover to roll on hills.</p>
 		<h5>Velocity Control</h5>
@@ -113,7 +113,7 @@
 				<source src="./resources/orbit_prediction.mp4" type=video/mp4>
 			</video>
 		</div>
-		<p>In terms of collision handling, the simulator enforces the conservation of linear momentum through completely inelastic collisions. When two bodies collide, their masses combine to form a single body, and the resulting body's radius is adjusted based on a predetermined constant density for all bodies within the simulator. To ensure momentum conservation, the velocity of the resulting body is also adjusted accordingly. The subsequent video showcases this behavior.</p>
+		<p>In terms of collision handling, the simulator approximates celestial body collisions using a simplified model that enforces the conservation of linear momentum through completely inelastic collisions. When two bodies collide, their masses combine to form a single body, and the resulting body's radius is adjusted based on a predetermined constant density for all bodies within the simulator. To ensure momentum conservation, the velocity of the resulting body is also adjusted accordingly. The subsequent video showcases this behavior.</p>
 		<div class="media_container">
 			<video class="media" controls>
 				<source src="./resources/collisions.mp4" type=video/mp4>
