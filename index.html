@@ -19,6 +19,7 @@
 		<li><a href="#about_me" id="nav_about_me">ABOUT ME</a></li>
 		<li class=dropdown_btn><a href="#projects" id="nav_projects">PROJECTS</a>
 			<ul class="dropdown_content">
+				<li><a href="#metal_printer">Metal 3D Printer</a></li>
 				<li><a href="#robotic_arm_control">Robotic Arm Control</a></li>
 				<li><a href="#robotic_driving_control">Robotic Driving Control</a></li>
 				<li><a href="#orbit_sim">Solar System Formation Simulator</a></li>
@@ -53,6 +54,7 @@
 		<p>The following is a list of projects I've developed with details regarding what went into them. Most projects were done independently and anything not made entirely by me will be marked as such.</p>
 		
 		<p>
+			<a href="#metal_printer">Metal 3D Printer</a><br>
 			<a href="#robotic_arm_control">Robotic Arm Control</a><br>
 			<a href="#robotic_driving_control">Robotic Driving Control</a><br>
 			<a href="#orbit_sim">Solar System Formation Simulator</a><br>
@@ -61,6 +63,44 @@
 			<a href="#path_planning">Path Planning Algorithm Visualizer</a><br>
 			<a href="#personal_website">Personal Website</a>
 		</p>
+
+		<div class=section_subheading id="metal_printer"></div>
+
+		<h3>Metal 3D Printer</h3>
+		<p>As the lead developer of software that transforms aerospace welding machines into 3D printers, I have gained extensive experience in designing, developing, and deploying complex user-facing software. The software I developed for metal additive 3D printing comprises a graphical CAD-style editor and various toolpath generation tools for welding and 3D printing of metal components. These tools enable users to create parts from scratch, repair parts, or add features to existing parts during production.</p>
+		<h5>Graphical Editor</h5>
+		<p>I custom-built the CAD-style editor using OpenGL to ensure fast rendering of models with millions of triangles and point clouds with millions of points.</p>
+		<div class="media_container">
+			<video class="media" controls>
+				<source src="./resources/render_demo.mp4" type=video/mp4>
+			</video>
+		</div>
+		<p>For debugging purposes, I implemented a runtime recompiler for shader programs that automatically updates the shader source code loaded on the GPU whenever a developer modifies the shader source on the hard drive.</p>
+		<div class="media_container">
+			<video class="media" controls>
+				<source src="./resources/shader_demo.mp4" type=video/mp4>
+			</video>
+		</div>
+		<h5>Slicer</h5>
+		<p>I designed a custom 3D printing slicer, specifically tailored to the particular welding process that my employer specializes in. This slicer can also generate 5-axis toolpaths, allowing for the printing of complex geometries and overhangs without support material.</p>
+		<div class="media_container">
+			<video class="media" controls>
+				<source src="./resources/slice_demo.mp4" type=video/mp4>
+			</video>
+		</div>
+		<p>Below are some examples of parts that were welded using the slicer I wrote.</p>
+		<picture class="media_container">
+			<img src="./resources/triangle_infill.jpg" class="media">
+		</picture>
+		<picture class="media_container">
+			<img src="./resources/dino.jpeg" class="media">
+		</picture>
+		<h5>Dynamic Welding Repair</h5>
+		<p>To repair service-run aerospace components, I developed sophisticated proprietary software tools that generate dynamic 5-axis toolpaths, responding to the variable wear conditions of the given parts. Below a picture of this tool and the resulting weld is shown.</p>
+		<picture class="media_container">
+			<img src="./resources/dynamic_buildup.jpg" class="media">
+		</picture>
+		<p>I began creating the aforementioned tools in the fall of 2020, and they have directly resulted in over $1M in sales to date. These tools operate in both industrial production environments and R&D facilities. My employer now utilizes these tools as the foundation of their offerings in the rapidly expanding additive manufacturing industry.</p>
 
 		<div class=section_subheading id="robotic_arm_control"></div>
 
